@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            background-color: black;
+            width: 100%;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .recording {
+            height: 50%;
+            width: 70%;
+        }
+
+        #stop {
+            background-color: rgb(241, 14, 44);
+            border-radius: 15px 15px 15px 15px;
+            outline: none;
+            padding: 1% 5% 1% 5%;
+            color: white;
+            border: none;
+            font-size: medium;
+        }
+
+        #stop:hover {
+            color: rgb(241, 14, 44);
+            border-radius: 15px 15px 15px 15px;
+            padding: 1% 5% 1% 5%;
+            background-color: white;
+            font-size: medium;
+            border-color: rgb(241, 14, 44);
+            border-style: solid 1px;
+            transition: ease-in 0.2s;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <a href="https://lordicon.com/">
+            <img class="recording" alt="recording-icon" src="recording.gif" />
+        </a>
+        <button id="stop">Done</button>
+    </div>
+    <script defer src="audio-capture.js"></script>
+</body>
+</html>
