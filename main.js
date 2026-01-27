@@ -31,6 +31,8 @@ app.whenReady().then(() => {
 
     tray.on("click", function () {
         mainWindow = new BrowserWindow({
+            // height: 400,
+            // width: 400,
             webPreferences: {
                 preload: path.join(__dirname, 'preload.js'),
                 contextIsolation: true
@@ -49,7 +51,7 @@ app.whenReady().then(() => {
 
 
 ipcMain.handle("callSpotify", (_event, buffer) => {
-    let filePath = path.join(__dirname, 'spotify/audio.wav');
+    let filePath = path.join(__dirname, 'audio.wav');
     fs.writeFileSync(filePath, Buffer.from(buffer));
 
     const openai = new OpenAI();
